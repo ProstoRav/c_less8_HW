@@ -50,16 +50,15 @@ void FindMinRowSum(int[,] matr)
         }
         result[i] = i + 1;
     }
-    Console.Write($"Номер строк с наименьшей суммой элементов: ");
+    Console.Write($"Номер строки с наименьшей суммой элементов: ");
     for (int i = 0; i < result.GetLength(0); i++)
     {
         if (currentsum[i] == minsum)
         {
-            Console.Write($"{result[i]} ");
+            Console.Write($"{result[i]}, ");
         }
-
     }
-    Console.Write($"строка");
+    Console.Write($"\b\b строка");
 }
 
 int rows, columns;
