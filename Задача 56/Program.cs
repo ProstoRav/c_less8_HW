@@ -8,6 +8,9 @@
 
 void PrintArray(int[,] matr)
 {
+    Console.WriteLine();
+    Console.WriteLine($"Задан массив: ");
+    Console.WriteLine();
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
@@ -16,6 +19,7 @@ void PrintArray(int[,] matr)
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
 void FillArray(int[,] matr)
@@ -68,6 +72,7 @@ Console.Write($"Введите количество столбцов двуме�
 int.TryParse(Console.ReadLine()!, out columns);
 if (rows < 1 || columns < 1)
 {
+    Console.WriteLine();
     Console.WriteLine($"Невозможно создать массив с такими параметрами, пожалуйста перезапустите программу");
     Environment.Exit(0);
 }

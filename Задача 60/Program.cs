@@ -7,6 +7,8 @@
 
 void PrintArray(int[,,] matr)
 {
+    Console.WriteLine();
+    Console.WriteLine($"Массив размером {matr.GetLength(0)} x {matr.GetLength(1)} x {matr.GetLength(2)}");
     for (int n = 0; n < matr.GetLength(2); n++)
     {
         for (int i = 0; i < matr.GetLength(0); i++)
@@ -47,6 +49,7 @@ Console.Write($"Введите количество слоёв трёхмерн�
 int.TryParse(Console.ReadLine()!, out layers);
 if (rows < 1 || columns < 1 || layers < 1)
 {
+    Console.WriteLine();
     Console.WriteLine($"Невозможно создать массив с такими параметрами, пожалуйста перезапустите программу");
     Environment.Exit(0);
 }

@@ -16,6 +16,7 @@ void PrintArray(int[,] matr)
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
 void FillArray(int[,] matr)
@@ -68,6 +69,7 @@ void CheckArray(int rows, int columns)
 {
     if (rows < 1 || columns < 1)
     {
+        Console.WriteLine();
         Console.WriteLine($"Невозможно создать массив с такими параметрами, пожалуйста перезапустите программу");
         Environment.Exit(0);
     }
@@ -93,6 +95,7 @@ FillArray(matrix2);
 
 if (columns1 != rows2)
 {
+    Console.WriteLine();
     Console.WriteLine($"Для произведения матриц необходимо чтобы столбцы первой равнялись количеству строк второй, пожалуйста перезапустите программу");
     Environment.Exit(0);
 }

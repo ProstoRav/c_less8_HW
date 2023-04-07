@@ -57,13 +57,16 @@ Console.Write($"Введите количество столбцов двуме�
 int.TryParse(Console.ReadLine()!, out columns);
 if (rows < 1 || columns < 1)
 {
+    Console.WriteLine();
     Console.WriteLine($"Невозможно создать массив с такими параметрами, пожалуйста перезапустите программу");
     Environment.Exit(0);
 }
 int[,] matrix = new int[rows, columns];
 FillArray(matrix);
+Console.WriteLine();
 Console.WriteLine($"Задан массив:");
 PrintArray(matrix);
 SortRowHighLow(matrix);
+Console.WriteLine();
 Console.WriteLine($"В итоге получается вот такой массив:");
 PrintArray(matrix);
